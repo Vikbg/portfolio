@@ -1,13 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTwitter,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaInstagram, FaSnapchatGhost, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import Viktor from "./Viktor";
 
@@ -33,33 +27,30 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 sm:px-12 bg-bg text-text min-h-screen"
-    >
-      <div className="max-w-7xl mx-auto flex flex-col items-center space-y-12">
+    <section id="contact" className="bg-bg text-text min-h-screen px-6 py-20 sm:px-12">
+      <div className="mx-auto flex max-w-7xl flex-col items-center space-y-12">
         {/* Title Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-6xl font-light tracking-tight mb-4">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="mb-4 text-3xl font-light tracking-tight sm:text-4xl lg:text-6xl">
             Let&apos;s Connect
           </h2>
-          <div className="w-20 h-px bg-white/20"></div>
+          <div className="h-px w-16 bg-white/20 sm:w-20"></div>
         </div>
 
-        <div className="grid grid-rows-1 lg:grid-row-2 gap-16 items-center justify-center">
+        <div className="lg:grid-row-2 grid grid-rows-1 items-center justify-center gap-16">
           {/* Left Side - Contact Info */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 space-y-12">
+          <div className="grid grid-cols-1 space-y-12 sm:grid-cols-2">
             <div>
               <div>
-                <p className="text-md sm:text-lg leading-relaxed text-gray-300 font-light mb-8">
-                  I&apos;m always open to discussing new projects, creative ideas, or
-                  opportunities to be part of your vision.
+                <p className="text-md mb-8 leading-relaxed font-light text-gray-300 sm:text-lg">
+                  I&apos;m always open to discussing new projects, creative ideas, or opportunities
+                  to be part of your vision.
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/5">
                     <svg
                       width="20"
                       height="20"
@@ -72,19 +63,19 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xs sm:text-sm uppercase tracking-wide opacity-70 mb-1">
+                    <h3 className="mb-1 text-xs tracking-wide uppercase opacity-70 sm:text-sm">
                       Email
                     </h3>
                     <a
                       href="mailto:viktorsrhk@gmail.com"
-                      className="text-md sm:text-lg hover:opacity-70 transition-opacity"
+                      className="text-md transition-opacity hover:opacity-70 sm:text-lg"
                     >
                       viktorsrhk@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/5">
                     <svg
                       width="20"
                       height="20"
@@ -98,7 +89,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xs sm:text-sm uppercase tracking-wide opacity-70 mb-1">
+                    <h3 className="mb-1 text-xs tracking-wide uppercase opacity-70 sm:text-sm">
                       Location
                     </h3>
                     <p className="text-md sm:text-lg">Lisieux, France</p>
@@ -109,15 +100,14 @@ const Contact = () => {
             <Viktor />
           </div>
           {/* Social Icons */}
-          <div className="grid grid-rows-2 gap-3.5 mt-5">
+          <div className="mt-5 grid grid-rows-2 gap-3.5">
             <div className="flex justify-center">
-              <p className="text-center text-base lg:text-lg text-stone-500">
-                <span className="text-lg lg:text-2xl text-stone-50">
+              <p className="text-center text-base text-stone-500 lg:text-lg">
+                <span className="text-lg text-stone-50 lg:text-2xl">
                   Join me on my socials networks!
                 </span>
                 <br />
-                And let&apos;s create a project together. Contribute on our Github&apos;s
-                repo.
+                And let&apos;s create a project together. Contribute on our Github&apos;s repo.
                 <br />
                 <span className="text-stone-200">Join</span>.{" "}
                 <span className="text-stone-200">Chat</span>.{" "}
@@ -125,14 +115,14 @@ const Contact = () => {
                 <span className="text-stone-200">Build Together</span>.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              {socialLinks.map((link) => (
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+              {socialLinks.map(link => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center backdrop-blur-sm bg-white/10 border border-white/10 text-(--color-primary-dark) hover:bg-(--color-primary) hover:text-(--color-card) transition-colors text-2xl"
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-lg text-(--color-primary-dark) backdrop-blur-sm transition-colors hover:bg-(--color-primary) hover:text-(--color-card) sm:h-16 sm:w-16 sm:text-2xl"
                   aria-label={link.label}
                 >
                   {link.icon}

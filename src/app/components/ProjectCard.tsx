@@ -2,7 +2,7 @@
 
 import React from "react";
 import FakeTerminal from "./FakeTerminal";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 
 type ProjectCardProps = {
@@ -11,9 +11,9 @@ type ProjectCardProps = {
   tags: string[];
   terminalOutput?: string[];
   description: string;
-  label: string, 
-  href: string,
-  image?: string
+  label: string;
+  href: string;
+  image?: string;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -24,78 +24,69 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   terminalOutput,
   label,
   href,
-  image
+  image,
 }) => {
-
   // Status monochrome
   const statusColor =
     status === "Not Started"
       ? "bg-gray-600"
       : status === "In Progress"
-      ? "bg-gray-400"
-      : status === "Done"
-      ? "bg-gray-200"
-      : "bg-gray-500";
+        ? "bg-gray-400"
+        : status === "Done"
+          ? "bg-gray-200"
+          : "bg-gray-500";
 
   return (
-    <div
-      className="
-      text-white px-6 py-10 space-y-10 
-      rounded-2xl backdrop-blur-sm 
-      relative
-    "
+    <article
+      className="relative space-y-6 rounded-2xl px-4 py-8 text-white backdrop-blur-sm sm:space-y-10 sm:px-6 sm:py-10"
+      role="region"
+      aria-label={`Project: ${title}`}
     >
       {/* Title */}
-      <h2 className="sm:text-6xl text-2xl font-light tracking-tight">{title}</h2>
+      <h2 className="text-2xl font-light tracking-tight sm:text-6xl">{title}</h2>
 
       {/* Status + Tags */}
-      <div className="grid grid-rows-2 sm:flex items-center gap-6 text-sm opacity-80">
+      <div className="grid grid-rows-2 items-center gap-6 text-sm opacity-80 sm:flex">
         <div className="flex items-center gap-2">
           <span className="text-xs sm:text-base">{status}</span>
-          <span className={`w-2.5 h-2.5 rounded-full ${statusColor}`} />
+          <span className={`h-2.5 w-2.5 rounded-full ${statusColor}`} />
         </div>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-3">
           {tags.map((tag, i) => (
             <React.Fragment key={i}>
-              <span className="sm:text-xs text-[0.6rem] uppercase tracking-wide opacity-70">
+              <span className="text-[0.6rem] tracking-wide uppercase opacity-70 sm:text-xs">
                 {tag}
               </span>
 
-              {i !== tags.length - 1 && (
-                <div className="w-px h-4 bg-white/20"></div>
-              )}
+              {i !== tags.length - 1 && <div className="h-4 w-px bg-white/20"></div>}
             </React.Fragment>
           ))}
         </div>
       </div>
 
       {/* LAYOUT */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         {/* DESCRIPTION */}
         <div>
-          <p className="opacity-70 leading-relaxed text-sm sm:text-lg max-w-lg">
-            {description}
-          </p>
+          <p className="max-w-lg text-sm leading-relaxed opacity-70 sm:text-lg">{description}</p>
           <div className="mt-5">
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:w-12 md:h-12 w-10 h-10 rounded-lg flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-accent hover:text-(--color-card) transition-colors text-lg"
-                aria-label={label}
-              >
-                <FaGithub/>
-              </a>
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-12 md:w-12"
+              aria-label={label}
+            >
+              <FaGithub />
+            </a>
           </div>
         </div>
 
         {/* TERMINAL OUTPUT */}
-        {terminalOutput && terminalOutput.length > 0 && (
-          <FakeTerminal lines={terminalOutput} />
-        )}
+        {terminalOutput && terminalOutput.length > 0 && <FakeTerminal lines={terminalOutput} />}
         {/* IMAGE OUTPUT */}
         {image && (
           <div className="flex items-center justify-center">
@@ -103,7 +94,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 

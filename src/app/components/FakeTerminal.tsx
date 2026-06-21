@@ -36,11 +36,7 @@ const FakeTerminal: React.FC<FakeTerminalProps> = ({ lines }) => {
   return (
     <div
       ref={terminalRef}
-      className="
-        w-full rounded-xl
-        p-4 font-mono text-[0.6rem] sm:text-sm leading-relaxed
-        overflow-hidden backdrop-blur
-      "
+      className="w-full overflow-hidden rounded-xl p-4 font-mono text-[0.6rem] leading-relaxed backdrop-blur sm:text-sm"
     >
       <pre className="whitespace-pre-wrap">
         {lines.map((line, i) => (

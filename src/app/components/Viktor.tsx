@@ -5,9 +5,9 @@ import { getImagePath } from "@/lib/paths";
 
 const Viktor = () => {
   return (
-    <div className="grid grid-rows-2 grid-cols-1 justify-center">
-      <div className="flex flex-col justify-center items-center">
-        <p className="flex my-2.5 bg-gray-900/40 justify-center items-center text-lg text-bold w-50 text-center h-10 rounded-2xl">
+    <div className="grid grid-cols-1 grid-rows-2 justify-center">
+      <div className="flex flex-col items-center justify-center">
+        <p className="text-bold my-2.5 flex h-10 w-50 items-center justify-center rounded-2xl bg-gray-900/40 text-center text-lg">
           viktor_srhk
         </p>
         <div className="relative h-32 w-32">
@@ -18,7 +18,7 @@ const Viktor = () => {
             className="rounded-full"
           />
         </div>
-        <div className="grid grid-row-3 gap-1 h-1 w-full mt-1 opacity-35">
+        <div className="grid-row-3 mt-1 grid h-1 w-full gap-1 opacity-35">
           <hr className="h-px w-full max-w-20 justify-self-center" />
           <hr className="h-px w-full max-w-15 justify-self-center" />
           <hr className="h-px w-full max-w-10 justify-self-center" />
@@ -26,11 +26,11 @@ const Viktor = () => {
       </div>
       <Link
         href="https://instagram.com/viktor_srhk"
-        className="justify-self-center h-fit w-fit scale-100 opacity-80 transition-all ease-in hover:opacity-100 hover:scale-105 mt-9"
+        className="mt-9 h-fit w-fit scale-100 justify-self-center opacity-80 transition-all ease-in hover:scale-105 hover:opacity-100"
         target="_blank"
         hrefLang="en"
       >
-        <div className="flex justify-center items-center m-2 border rounded-xl w-fit border-white/10 p-3 space-x-2 max-h-8">
+        <div className="m-2 flex max-h-8 w-fit items-center justify-center space-x-2 rounded-xl border border-white/10 p-3">
           <FaInstagram />
           <span className="text-gray-500">@viktor_srhk</span>
         </div>

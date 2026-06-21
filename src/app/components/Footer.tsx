@@ -13,49 +13,66 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="flex items-end mt-16 h-150 md:h-100 bg-linear-to-t from-accent/25 via-accent/15 to-bg text-(--color-card)">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-
+    <footer className="from-accent/25 via-accent/15 to-bg mt-16 flex h-150 items-end bg-linear-to-t text-(--color-card) md:h-100">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-12 md:grid-cols-3">
         {/* About */}
         <div className="space-y-4">
-          <h3 className="text-base md:text-xl font-semibold tracking-wide">VIKTOR_SRHK</h3>
-          <p className="opacity-80 text-xs md:text-sm leading-relaxed">
-            Solo devlopper and creator of unique projects. Follow our elegant universe and let you get by our creations.
+          <h3 className="text-base font-semibold tracking-wide md:text-xl">VIKTOR_SRHK</h3>
+          <p className="text-xs leading-relaxed opacity-80 md:text-sm">
+            Solo devlopper and creator of unique projects. Follow our elegant universe and let you
+            get by our creations.
           </p>
         </div>
 
         {/* Quick Links */}
         <div className="space-y-4">
-          <h3 className="text-base md:text-xl font-semibold tracking-wide">Fast Links</h3>
-          <ul className="text-xs md:text-sm space-y-2 opacity-80">
-            <li><a href="#projects" className="hover:text-accent transition-colors">Projects</a></li>
-            <li><a href="#about" className="hover:text-accent transition-colors">About</a></li>
-            <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
-            <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
+          <h3 className="text-base font-semibold tracking-wide md:text-xl">Fast Links</h3>
+          <ul className="space-y-2 text-xs opacity-80 md:text-sm">
+            <li>
+              <a href="#projects" className="hover:text-accent transition-colors">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-accent transition-colors">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#services" className="hover:text-accent transition-colors">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-accent transition-colors">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Social + Location */}
         <div className="space-y-4">
-          <h3 className="text-base md:text-xl font-semibold tracking-wide">Follow Me</h3>
+          <h3 className="text-base font-semibold tracking-wide md:text-xl">Follow Me</h3>
           <div className="flex gap-4">
-            {socialLinks.map((link) => (
+            {socialLinks.map(link => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="md:w-10 md:h-10 w-7 h-7 rounded-lg flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-accent hover:text-(--color-card) transition-colors text-lg"
+                className="hover:bg-accent flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-10 md:w-10"
                 aria-label={link.label}
               >
                 {link.icon}
               </a>
             ))}
           </div>
-          <p className="opacity-70 text-xs md:text-sm mt-4">Lisieux, France</p>
-          <p className="opacity-50 text-[0.65rem] md:text-xs mt-2">© {new Date().getFullYear()} VIKTOR_SRHK. All rights reserved.</p>
+          <p className="mt-4 text-xs opacity-70 md:text-sm">Lisieux, France</p>
+          <p className="mt-2 text-[0.65rem] opacity-50 md:text-xs">
+            © {new Date().getFullYear()} VIKTOR_SRHK. All rights reserved.
+          </p>
         </div>
-
       </div>
     </footer>
   );

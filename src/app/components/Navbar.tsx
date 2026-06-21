@@ -18,16 +18,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="navbar" className="text-white p-4">
-      <div className="max-w-7xl mx-auto flex justify-center items-center">
-        <ul className="flex gap-6">
-          {links.map((link) => (
-            <li key={link.label} className="relative">
+    <nav id="navbar" className="p-4 text-white" aria-label="Main navigation">
+      <div className="mx-auto flex max-w-7xl items-center justify-center">
+        <ul className="flex gap-6" role="menubar">
+          {links.map(link => (
+            <li key={link.label} role="none">
               <Link
                 href={link.href}
-                scroll={false} // Important pour ne pas faire de scroll automatique par Next.js
-                className={`after:content-[''] after:w-0 hover:after:${link.afterWidth} after:h-0.5 after:block after:bg-white after:absolute after:transition-all hidden md:block opacity-80 text-sm cursor-pointer hover:opacity-100 transition-all duration-300 ease-in-out w-max hover:-translate-0.5`}
-                onClick={(e) => link.href !== "#" && handleScroll(e, link.href)}
+                scroll={false}
+                className={`after:w-0 after:content-[''] hover:after:${link.afterWidth} hidden w-max cursor-pointer text-sm opacity-80 transition-all duration-300 ease-in-out after:absolute after:block after:h-0.5 after:bg-white after:transition-all hover:-translate-0.5 hover:opacity-100 md:block`}
+                onClick={e => link.href !== "#" && handleScroll(e, link.href)}
+                role="menuitem"
+                aria-label={`Navigate to ${link.label} section`}
               >
                 {link.label}
               </Link>

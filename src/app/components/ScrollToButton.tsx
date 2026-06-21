@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 
@@ -8,7 +8,12 @@ type ScrollToButtonProps = React.PropsWithChildren<{
   ariaLabel?: string;
 }>;
 
-const ScrollToButton: React.FC<ScrollToButtonProps> = ({ targetId, className, ariaLabel, children }) => {
+const ScrollToButton: React.FC<ScrollToButtonProps> = ({
+  targetId,
+  className,
+  ariaLabel,
+  children,
+}) => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     const el = document.getElementById(targetId);
