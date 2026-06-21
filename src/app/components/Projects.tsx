@@ -44,8 +44,7 @@ const featuredProjects = [
     terminalOutput: [
       `<span class="text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]">viktor_srhk@pop-os</span>:~/function-derivator$<span class="text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]"> cargo run -- "sin(x^2)"</span>`,
       `<span class="text-gray-300">f(x)  = sin(x^2)</span>`,
-      `<span class="text-gray-300">f'(x) = 2x * cos(x^2)</span>`,
-      `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">simplified</span>`,
+      `<span class="text-gray-300">f'(x) = 2x * cos(x^2)</span>`,,
     ],
     label: "Function Derivator on GitHub",
     href: "https://github.com/Vikbg/function-derivator",
@@ -77,7 +76,6 @@ const featuredProjects = [
       `<span class="text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]">viktor_srhk@pop-os</span>:~/portfolio$<span class="text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]"> pnpm build && pnpm start</span>`,
       `<span class="text-gray-300">> Building with Next.js</span>`,
       `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">Server listening on http://localhost:3000</span>`,
-      `<span class="text-emerald-300 drop-shadow-[0_0_6px_rgba(0,255,200,0.7)]">Deployed via Vercel</span>`,
     ],
     label: "Portfolio on GitHub",
     href: "https://github.com/Vikbg/portfolio",
