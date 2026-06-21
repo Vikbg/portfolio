@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
+import { getImagePath } from "@/lib/paths";
 
 const Viktor = () => {
   return (
@@ -11,7 +12,7 @@ const Viktor = () => {
         </p>
         <div className="relative h-32 w-32">
           <Image
-            src="/logo.webp"
+            src={getImagePath("/logo.webp")}
             alt="Photo of viktor_srhk"
             fill
             className="rounded-full"
