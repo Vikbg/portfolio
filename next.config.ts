@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: isGithubPages ? "/portfolio" : undefined,
   assetPrefix: isGithubPages ? "/portfolio/" : undefined,
+  env: {
+    NEXT_PUBLIC_GITHUB_PAGES: isGithubPages ? "true" : "false",
+  },
   turbopack: {
     root: __dirname,
   },
