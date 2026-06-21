@@ -6,7 +6,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-accent: var(--color-cyan-950);
-  --color-bg: #0a0a0a;           
+  --color-bg: #0a0a0a;
   --color-text: #ededed;
 }
 
@@ -28,7 +28,7 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary-dark) var(--color-bg);
-  @apply selection:bg-sky-950
+  @apply selection:bg-sky-950;
 }
 
 /* Chrome */
