@@ -40,16 +40,17 @@ const featuredProjects = [
     status: "Done",
     tags: ["Rust", "Parser", "AST", "CLI", "Symbolic Math"],
     description:
-      "A symbolic differentiation engine in Rust. It parses mathematical expressions into an AST, applies differentiation rules, simplifies the result, and exposes the workflow through a CLI. It supports arithmetic operators, trigonometric and exponential functions, chain rule, product rule, quotient rule, and general power rule.",
+      "Symbolic differentiation engine in Rust. Parses expressions to an AST, applies differentiation and simplification rules, and exposes a concise CLI. Supports arithmetic, trigonometric and exponential functions, chain/product/quotient/power rules, and basic simplifications.",
     terminalOutput: [
       `<span class="text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]">viktor_srhk@pop-os</span>:~/function-derivator$<span class="text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]"> cargo run -- "sin(x^2)"</span>`,
       `<span class="text-gray-300">f(x)  = sin(x^2)</span>`,
-      `<span class="text-gray-300">f'(x) = cos(x^2) * 2 * x</span>`,
-      `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">rules: chain, product, quotient, power</span>`,
+      `<span class="text-gray-300">f'(x) = 2x * cos(x^2)</span>`,
+      `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">simplified</span>`,
     ],
     label: "Function Derivator on GitHub",
     href: "https://github.com/Vikbg/function-derivator",
   },
+
   {
     title: "Small Engine",
     status: "In Progress",
@@ -67,21 +68,21 @@ const featuredProjects = [
     href: "https://github.com/Vikbg/small-engine",
   },
   {
-    title: "Vilang",
-    status: "In Progress",
-    tags: ["Assembly", "Compiler", "NASM", "Linux", "ELF"],
+    title: "Portfolio",
+    status: "This Site",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     description:
-      "Vilang is an x86-64 Linux compiler prototype written entirely in NASM assembly and linked as a static ELF. Its CLI can check source files, emit NASM assembly, build static binaries, and run generated output while the lexer, type system, borrow checker, and language semantics continue to evolve.",
+      "Personal portfolio website built with Next.js and Tailwind CSS. Showcases projects, blog posts, and contact info; includes CI and deployment config. Source for this site is available in the repository.",
     terminalOutput: [
-      `<span class="text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]">viktor_srhk@pop-os</span>:~/vilang$<span class="text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]"> ./vilang run tests/hello.vi</span>`,
-      `<span class="text-gray-300">loading source file...</span>`,
-      `<span class="text-gray-300">validating fn main...</span>`,
-      `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">emitting NASM assembly to out.asm</span>`,
-      `<span class="text-emerald-300 drop-shadow-[0_0_6px_rgba(0,255,200,0.7)]">static ELF built and executed.</span>`,
+      `<span class="text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]">viktor_srhk@pop-os</span>:~/portfolio$<span class="text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]"> pnpm build && pnpm start</span>`,
+      `<span class="text-gray-300">> Building with Next.js</span>`,
+      `<span class="text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]">Server listening on http://localhost:3000</span>`,
+      `<span class="text-emerald-300 drop-shadow-[0_0_6px_rgba(0,255,200,0.7)]">Deployed via Vercel</span>`,
     ],
-    label: "Vilang on GitHub",
-    href: "https://github.com/Vikbg/vilang",
+    label: "Portfolio on GitHub",
+    href: "https://github.com/Vikbg/portfolio",
   },
+
 ];
 
 const Projects = () => {
