@@ -12,7 +12,7 @@ type ProjectCardProps = {
   terminalOutput?: string[];
   description: string;
   label: string;
-  href: string;
+  href?: string;
   image?: string;
 };
 
@@ -71,18 +71,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* DESCRIPTION */}
         <div>
           <p className="max-w-lg text-sm leading-relaxed opacity-70 sm:text-lg">{description}</p>
-          <div className="mt-5">
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-12 md:w-12"
-              aria-label={label}
-            >
-              <FaGithub />
-            </a>
-          </div>
+          {href && (
+            <div className="mt-5">
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-12 md:w-12"
+                aria-label={label}
+              >
+                <FaGithub />
+              </a>
+            </div>
+          )}
         </div>
 
         {/* TERMINAL OUTPUT */}

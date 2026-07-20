@@ -1,5 +1,19 @@
 [
   {
+    "title": "MatchDay",
+    "status": "In Progress",
+    "tags": ["Next.js", "TypeScript", "MongoDB", "Stripe", "Twilio", "SaaS"],
+    "description": "MatchDay is a SaaS for amateur sports clubs that simplifies match-day logistics. Coaches, club managers, and parents coordinate attendance, carpooling, and reminders from one shared space, so every player gets to the match without the usual message-thread chaos.",
+    "terminalOutput": [
+      "<span class=\"text-green-300 drop-shadow-[0_0_6px_rgba(0,255,100,0.7)]\">viktor_srhk@pop-os</span>:~/matchday$<span class=\"text-cyan-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.7)]\"> pnpm dev</span>",
+      "<span class=\"text-gray-300\">> MatchDay dev</span>",
+      "<span class=\"text-gray-300\">> next dev --turbopack</span>",
+      "<span class=\"text-blue-300 drop-shadow-[0_0_6px_rgba(100,150,255,0.7)]\">Match-day workspace ready for clubs, coaches, and parents.</span>",
+      "<span class=\"text-emerald-300 drop-shadow-[0_0_6px_rgba(0,255,200,0.7)]\">Carpool coordination, secure reminders, and subscriptions in development.</span>"
+    ],
+    "label": "MatchDay is currently in private development"
+  },
+  {
     "title": "CoreServe",
     "status": "In Progress",
     "tags": ["Node.js", "Express", "MariaDB", "Redis", "JWT", "API"],
