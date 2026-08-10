@@ -21,8 +21,9 @@ const ScrollToButton: React.FC<ScrollToButtonProps> = ({
       const headerOffset = 0;
       const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = Math.max(elementPosition - headerOffset, 0);
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      window.scrollTo({ top: offsetPosition, behavior: reduceMotion ? "auto" : "smooth" });
     } else {
       // fallback to anchor behavior
       window.location.hash = `#${targetId}`;

@@ -178,7 +178,7 @@ const projects: Project[] = [
     status: "This Site",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     description:
-      "Personal portfolio website built with Next.js and Tailwind CSS. Showcases projects, blog posts, and contact info; includes CI and deployment config. Source for this site is available in the repository.",
+      "Personal portfolio website built with Next.js and Tailwind CSS. Showcases projects, services, and contact information; includes CI and deployment configuration. Source for this site is available in the repository.",
     terminalOutput: [
       {
         segments: [
