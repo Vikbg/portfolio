@@ -4,19 +4,9 @@ import React from "react";
 import FakeTerminal from "./FakeTerminal";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import type { Project } from "@/data/projects";
 
-type ProjectCardProps = {
-  title: string;
-  status: string;
-  tags: string[];
-  terminalOutput?: string[];
-  description: string;
-  label: string;
-  href?: string;
-  image?: string;
-};
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<Project> = ({
   title,
   status,
   tags,
