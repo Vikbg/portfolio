@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { getImagePath } from "@/lib/paths";
 
 const Viktor = () => {
@@ -25,14 +25,16 @@ const Viktor = () => {
         </div>
       </div>
       <Link
-        href="https://instagram.com/viktor_srhk"
+        href="https://github.com/Vikbg"
         className="mt-9 h-fit w-fit scale-100 justify-self-center opacity-80 transition-all ease-in hover:scale-105 hover:opacity-100"
         target="_blank"
+        rel="noopener noreferrer"
         hrefLang="en"
+        aria-label="GitHub"
       >
         <div className="m-2 flex max-h-8 w-fit items-center justify-center space-x-2 rounded-xl border border-white/10 p-3">
-          <FaInstagram />
-          <span className="text-gray-500">@viktor_srhk</span>
+          <FaGithub />
+          <span className="text-gray-500">@Vikbg</span>
         </div>
       </Link>
     </div>

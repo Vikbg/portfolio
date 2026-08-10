@@ -1,22 +1,22 @@
 import React from "react";
-import { FaDollarSign } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 type ServiceCardProps = {
   name: string;
   description: string;
-  price: string[];
+  priceLabel: string;
   tags: string[];
   fiverrHref: string;
-  labelAnchorFiverrr: string;
+  serviceLabel: string;
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   name,
   description,
-  price,
+  priceLabel,
   tags,
   fiverrHref,
-  labelAnchorFiverrr,
+  serviceLabel,
 }) => {
   return (
     <article
@@ -24,19 +24,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       role="region"
       aria-label={`Service: ${name}`}
     >
-      <h2 className="tracking-tigh text-2xl font-light sm:text-6xl">{name}</h2>
+      <h2 className="text-2xl font-light tracking-tight sm:text-6xl">{name}</h2>
       <div className="grid grid-rows-1 items-center gap-6 text-sm opacity-80 sm:flex">
         <div className="flex items-center gap-2">
-          <span>
-            {price[0]}$-&nbsp;{price[1]}$
-          </span>
+          <span>{priceLabel}</span>
         </div>
       </div>
       <div>
         {/* Tags */}
         <div className="flex flex-wrap gap-3">
           {tags.map((tag, i) => (
-            <React.Fragment key={i}>
+            <React.Fragment key={tag}>
               <span className="text-[0.6rem] tracking-wide uppercase opacity-70 sm:text-xs">
                 {tag}
               </span>
@@ -48,17 +46,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
       <div className="col-start-2 grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         <p className="max-w-lg text-sm leading-relaxed opacity-70 sm:text-lg">{description}</p>
-        <div className="mt-5 flex flex-row items-center justify-center space-x-6">
-          <span className="hidden text-xl opacity-70 lg:block">More about&nbsp;</span>
+        <div className="mt-5 flex items-center justify-center">
           <a
-            key={labelAnchorFiverrr}
             href={fiverrHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) sm:h-12 sm:w-12"
-            aria-label={labelAnchorFiverrr}
+            className="hover:bg-accent inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-sm backdrop-blur-sm transition-colors hover:text-(--color-card)"
+            aria-label={serviceLabel}
           >
-            <FaDollarSign />
+            <span>View service</span>
+            <FaArrowUpRightFromSquare aria-hidden="true" />
           </a>
         </div>
       </div>

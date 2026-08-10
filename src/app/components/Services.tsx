@@ -5,21 +5,21 @@ import ServiceCard from "./ServiceCard";
 const Services = () => {
   const servicesSection = [
     {
-      title: "Automatisation scripts",
+      title: "Automation Scripts",
       description:
-        "You need to automaticaly delete your history from your browser on 4pm or add a task on your agenda more simple ? I'm here for you.",
-      price: ["10.00", "+50.00"],
-      tags: ["autamatisation", "script", "usefull", "cheap"],
-      label: "Automatisation scripts on viktor_srhk's fiverr page.",
+        "A custom script that removes repetitive manual work, such as organizing files, processing data, or connecting everyday tools. You receive the script, setup instructions, and a tested example for your workflow.",
+      priceLabel: "Starting at $10",
+      tags: ["automation", "scripting", "productivity", "custom workflow"],
+      label: "View service: Automation Scripts",
       href: "https://fiverr.com/viktor_srhk/gig/automatisation_scripts/",
     },
     {
       title: "Landing Page",
       description:
-        "You need more visibility ? What's more better for a commerce or a society than a custom Landing Page to attract more people and finnaly get more place in the game !",
-      price: ["75", "+1250"],
-      tags: ["landing page", "custome", "more views", "better choice"],
-      label: "Landing page on viktor_srhk's fiverr page.",
+        "A responsive custom landing page that presents your business, product, or event clearly. You receive the page, mobile-friendly styling, and deployment-ready source code.",
+      priceLabel: "Starting at $75",
+      tags: ["landing page", "responsive", "custom design", "deployment ready"],
+      label: "View service: Landing Page",
       href: "https://fiverr.com/viktor_srhk/gig/landing_page/",
     },
   ];
@@ -29,15 +29,15 @@ const Services = () => {
       id="services"
       className="grid grid-cols-1 gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2"
     >
-      {servicesSection.map((section, index) => (
+      {servicesSection.map(section => (
         <ServiceCard
-          key={index}
+          key={section.title}
           name={section.title}
           description={section.description}
-          price={section.price}
+          priceLabel={section.priceLabel}
           tags={section.tags}
           fiverrHref={section.href}
-          labelAnchorFiverrr={section.label}
+          serviceLabel={section.label}
         />
       ))}
     </section>
