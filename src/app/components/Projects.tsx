@@ -1,12 +1,12 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import projects from "@/data/projects.json";
+import projects from "@/data/projects";
 
 const Projects = () => {
   return (
     <div id="projects">
       {projects.map((project, index) => (
-        <React.Fragment key={project.href}>
+        <React.Fragment key={project.title}>
           <ProjectCard {...project} />
           {index !== projects.length - 1 && (
             <hr className="mx-6 h-px bg-white/20 opacity-25 sm:mx-20 lg:mx-40" />

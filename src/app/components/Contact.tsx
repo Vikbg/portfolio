@@ -1,21 +1,11 @@
 "use client";
 
 import React from "react";
-import { FaInstagram, FaSnapchatGhost, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import Viktor from "./Viktor";
 
 const socialLinks = [
-  {
-    label: "Instagram",
-    href: "https://instagram.com/viktor_srhk",
-    icon: <FaInstagram />,
-  },
-  {
-    label: "Snapchat",
-    href: "https://snapchat.com/add/viktor_srhk",
-    icon: <FaSnapchatGhost />,
-  },
   { label: "X", href: "https://x.com/viktor_srhk", icon: <FaTwitter /> },
   { label: "GitHub", href: "https://github.com/Vikbg", icon: <FaGithub /> },
   {
@@ -104,10 +94,11 @@ const Contact = () => {
             <div className="flex justify-center">
               <p className="text-center text-base text-stone-500 lg:text-lg">
                 <span className="text-lg text-stone-50 lg:text-2xl">
-                  Join me on my socials networks!
+                  Join me on social media!
                 </span>
                 <br />
-                And let&apos;s create a project together. Contribute on our Github&apos;s repo.
+                Let&apos;s create something together, contribute to one of my GitHub repositories, or
+                start a new project.
                 <br />
                 <span className="text-stone-200">Join</span>.{" "}
                 <span className="text-stone-200">Chat</span>.{" "}

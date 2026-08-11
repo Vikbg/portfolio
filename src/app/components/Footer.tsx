@@ -1,11 +1,9 @@
 "use client";
 
 import React from "react";
-import { FaInstagram, FaSnapchatGhost, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com/viktor_srhk", icon: <FaInstagram /> },
-  { label: "Snapchat", href: "https://snapchat.com/add/viktor_srhk", icon: <FaSnapchatGhost /> },
   { label: "X", href: "https://x.com/viktor_srhk", icon: <FaTwitter /> },
   { label: "GitHub", href: "https://github.com/Vikbg", icon: <FaGithub /> },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/viktor_srhk", icon: <FaLinkedin /> },
@@ -19,8 +17,8 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-base font-semibold tracking-wide md:text-xl">VIKTOR_SRHK</h3>
           <p className="text-xs leading-relaxed opacity-80 md:text-sm">
-            Solo devlopper and creator of unique projects. Follow our elegant universe and let you
-            get by our creations.
+            Independent developer building thoughtful software across web, backend, robotics, and
+            developer tools.
           </p>
         </div>
 
@@ -61,7 +59,7 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:bg-accent flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-10 md:w-10"
+                className="hover:bg-accent flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card)"
                 aria-label={link.label}
               >
                 {link.icon}

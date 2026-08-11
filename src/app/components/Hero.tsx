@@ -12,7 +12,7 @@ const Hero = () => {
       role="banner"
     >
       <div className="absolute top-[30%] max-sm:text-center md:left-[25%] lg:left-1/2 lg:-translate-x-1/2">
-        <h1 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-6xl">VIKTOR_SRHK here !</h1>
+        <h1 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-6xl">VIKTOR_SRHK here!</h1>
 
         <p className="mt-2 max-w-md text-sm sm:text-base lg:text-lg">
           I am glad to have you here. Explore my projects and get in touch!
