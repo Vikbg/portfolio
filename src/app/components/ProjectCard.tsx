@@ -83,9 +83,13 @@ const ProjectCard: React.FC<Project> = ({
         {terminalOutput && terminalOutput.length > 0 && <FakeTerminal lines={terminalOutput} />}
         {/* IMAGE OUTPUT */}
         {image && (
-          <div className="flex items-center justify-center">
-            <Image src={getImagePath(image)} alt={title} width={400} height={300} className="rounded-lg" />
-          </div>
+          <Image
+            src={getImagePath(image)}
+            alt={title}
+            width={860}
+            height={290}
+            className="h-auto w-full rounded-lg"
+          />
         )}
       </div>
     </article>
