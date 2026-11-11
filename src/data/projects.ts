@@ -22,6 +22,16 @@ export type Project = {
 
 const projects: Project[] = [
   {
+    title: "vstudy",
+    status: "Live",
+    tags: ["Next.js", "TypeScript", "Turso"],
+    description:
+      "A free study timer with Pomodoro, stopwatch, and countdown modes. Each saved session adds time to a GitHub-style contribution grid, so you can see how much you studied each day. You can start a session without an account.",
+    label: "Try vstudy",
+    href: "https://vstudy.dev/",
+    image: "/projects/vstudy.webp",
+  },
+  {
     title: "MatchDay",
     status: "In Progress",
     tags: ["Next.js", "TypeScript", "MongoDB", "Stripe", "Twilio", "SaaS"],

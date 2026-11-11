@@ -2,9 +2,10 @@
 
 import React from "react";
 import FakeTerminal from "./FakeTerminal";
-import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import type { Project } from "@/data/projects";
+import { getImagePath } from "@/lib/paths";
 
 const ProjectCard: React.FC<Project> = ({
   title,
@@ -16,13 +17,14 @@ const ProjectCard: React.FC<Project> = ({
   href,
   image,
 }) => {
+  const githubLink = href?.startsWith("https://github.com/");
   // Status monochrome
   const statusColor =
     status === "Not Started"
       ? "bg-gray-600"
       : status === "In Progress"
         ? "bg-gray-400"
-        : status === "Done"
+        : status === "Done" || status === "Live"
           ? "bg-gray-200"
           : "bg-gray-500";
 
@@ -68,10 +70,10 @@ const ProjectCard: React.FC<Project> = ({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-lg backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-12 md:w-12"
+                className={`hover:bg-accent inline-flex h-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-colors hover:text-(--color-card) md:h-12 ${githubLink ? "w-10 text-lg md:w-12" : "gap-2 px-4 text-sm"}`}
                 aria-label={label}
               >
-                <FaGithub />
+                {githubLink ? <FaGithub /> : <>{label} <FaExternalLinkAlt aria-hidden="true" /></>}
               </a>
             </div>
           )}
@@ -82,7 +84,7 @@ const ProjectCard: React.FC<Project> = ({
         {/* IMAGE OUTPUT */}
         {image && (
           <div className="flex items-center justify-center">
-            <Image src={image} alt={title} width={400} height={300} className="rounded-lg" />
+            <Image src={getImagePath(image)} alt={title} width={400} height={300} className="rounded-lg" />
           </div>
         )}
       </div>
